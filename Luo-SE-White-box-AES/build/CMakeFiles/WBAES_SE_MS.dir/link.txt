@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99  -O2 -m64 -mavx2 -g  -rdynamic CMakeFiles/WBAES_SE_MS.dir/test/wbaes_se_ms_test.c.o  -o WBAES_SE_MS  libWBAES_SE_LIB.a 

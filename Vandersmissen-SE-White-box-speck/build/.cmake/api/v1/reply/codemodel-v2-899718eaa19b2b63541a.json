@@ -1,0 +1,113 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WBSPECK_SE",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE-a9a5daa1ea93ff331b1b.json",
+					"name" : "WBSPECK_SE",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE_BP::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE_BP-5068e25c547bee87dd71.json",
+					"name" : "WBSPECK_SE_BP",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE_I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE_I-c5209f527f69c3a6d796.json",
+					"name" : "WBSPECK_SE_I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE_IBP::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE_IBP-4dd168a63740c7bfd5b5.json",
+					"name" : "WBSPECK_SE_IBP",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE_LIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE_LIB-ee997bbbc19f3adb9bd6.json",
+					"name" : "WBSPECK_SE_LIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE_SIMD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE_SIMD-c3ceefab4d1417a812c8.json",
+					"name" : "WBSPECK_SE_SIMD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WBSPECK_SE_SP::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WBSPECK_SE_SP-7ab8a00b4b692445033b.json",
+					"name" : "WBSPECK_SE_SP",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ryanclq/code/self-equivalence/white-box-speck/build",
+		"source" : "/home/ryanclq/code/self-equivalence/white-box-speck"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

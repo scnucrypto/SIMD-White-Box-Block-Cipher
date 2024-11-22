@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/aes.h
+stddef.h
+-
+string.h
+-
+stdint.h
+-
+stdlib.h
+-
+stdio.h
+-
+
+../include/speed.h
+sys/times.h
+-
+unistd.h
+-
+signal.h
+-
+stdio.h
+-
+
+/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/aes_test.c
+stdint.h
+-
+aes.h
+/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/aes.h
+speed.h
+/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/speed.h
+
