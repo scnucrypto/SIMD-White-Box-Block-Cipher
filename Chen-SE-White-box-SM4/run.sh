@@ -1,0 +1,1 @@
+gcc -o test sm4.c generateTable.c && ./test

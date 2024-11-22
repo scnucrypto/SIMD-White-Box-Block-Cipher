@@ -1,0 +1,1 @@
+cd build && rm -rf * && cmake .. && make -j8 && ./WBSM4_SE_CL 
