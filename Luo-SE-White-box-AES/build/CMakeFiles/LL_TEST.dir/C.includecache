@@ -30,11 +30,11 @@ stdint.h
 stdint.h
 -
 
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/LL_test.c
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/LL_test.c
 stdint.h
 -
 wbmatrix/WBMatrix.h
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/wbmatrix/WBMatrix.h
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/wbmatrix/WBMatrix.h
 wbaes_se_local.h
 -
 

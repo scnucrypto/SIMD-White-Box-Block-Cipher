@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/aes_test.c" "/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/AES_TEST.dir/test/aes_test.c.o"
+  "/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/aes_test.c" "/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/AES_TEST.dir/test/aes_test.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/WBAES_SE_LIB.dir/DependInfo.cmake"
+  "/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/WBAES_SE_LIB.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

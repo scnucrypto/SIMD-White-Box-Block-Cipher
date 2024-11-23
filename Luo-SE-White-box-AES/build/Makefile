@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ryanclq/code/self-equivalence/White-box-AES-SE
+CMAKE_SOURCE_DIR = /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ryanclq/code/self-equivalence/White-box-AES-SE/build
+CMAKE_BINARY_DIR = /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +124,19 @@ AES_TEST/fast:
 .PHONY : AES_TEST/fast
 
 #=============================================================================
+# Target rules for targets named WBAES_SE_LT_AVX2
+
+# Build rule for target.
+WBAES_SE_LT_AVX2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WBAES_SE_LT_AVX2
+.PHONY : WBAES_SE_LT_AVX2
+
+# fast build rule for target.
+WBAES_SE_LT_AVX2/fast:
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/build
+.PHONY : WBAES_SE_LT_AVX2/fast
+
+#=============================================================================
 # Target rules for targets named WBAES_SE_LT
 
 # Build rule for target.
@@ -135,19 +148,6 @@ WBAES_SE_LT: cmake_check_build_system
 WBAES_SE_LT/fast:
 	$(MAKE) -f CMakeFiles/WBAES_SE_LT.dir/build.make CMakeFiles/WBAES_SE_LT.dir/build
 .PHONY : WBAES_SE_LT/fast
-
-#=============================================================================
-# Target rules for targets named WBAES_SE_MS
-
-# Build rule for target.
-WBAES_SE_MS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 WBAES_SE_MS
-.PHONY : WBAES_SE_MS
-
-# fast build rule for target.
-WBAES_SE_MS/fast:
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/build
-.PHONY : WBAES_SE_MS/fast
 
 #=============================================================================
 # Target rules for targets named LL_TEST
@@ -337,87 +337,6 @@ src/wbaes_se_lt_neon.c.s:
 	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.s
 .PHONY : src/wbaes_se_lt_neon.c.s
 
-src/wbaes_se_ms.o: src/wbaes_se_ms.c.o
-
-.PHONY : src/wbaes_se_ms.o
-
-# target to build an object file
-src/wbaes_se_ms.c.o:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o
-.PHONY : src/wbaes_se_ms.c.o
-
-src/wbaes_se_ms.i: src/wbaes_se_ms.c.i
-
-.PHONY : src/wbaes_se_ms.i
-
-# target to preprocess a source file
-src/wbaes_se_ms.c.i:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.i
-.PHONY : src/wbaes_se_ms.c.i
-
-src/wbaes_se_ms.s: src/wbaes_se_ms.c.s
-
-.PHONY : src/wbaes_se_ms.s
-
-# target to generate assembly for a file
-src/wbaes_se_ms.c.s:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.s
-.PHONY : src/wbaes_se_ms.c.s
-
-src/wbaes_se_ms_avx2.o: src/wbaes_se_ms_avx2.c.o
-
-.PHONY : src/wbaes_se_ms_avx2.o
-
-# target to build an object file
-src/wbaes_se_ms_avx2.c.o:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o
-.PHONY : src/wbaes_se_ms_avx2.c.o
-
-src/wbaes_se_ms_avx2.i: src/wbaes_se_ms_avx2.c.i
-
-.PHONY : src/wbaes_se_ms_avx2.i
-
-# target to preprocess a source file
-src/wbaes_se_ms_avx2.c.i:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.i
-.PHONY : src/wbaes_se_ms_avx2.c.i
-
-src/wbaes_se_ms_avx2.s: src/wbaes_se_ms_avx2.c.s
-
-.PHONY : src/wbaes_se_ms_avx2.s
-
-# target to generate assembly for a file
-src/wbaes_se_ms_avx2.c.s:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.s
-.PHONY : src/wbaes_se_ms_avx2.c.s
-
-src/wbaes_se_ms_neon.o: src/wbaes_se_ms_neon.c.o
-
-.PHONY : src/wbaes_se_ms_neon.o
-
-# target to build an object file
-src/wbaes_se_ms_neon.c.o:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o
-.PHONY : src/wbaes_se_ms_neon.c.o
-
-src/wbaes_se_ms_neon.i: src/wbaes_se_ms_neon.c.i
-
-.PHONY : src/wbaes_se_ms_neon.i
-
-# target to preprocess a source file
-src/wbaes_se_ms_neon.c.i:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.i
-.PHONY : src/wbaes_se_ms_neon.c.i
-
-src/wbaes_se_ms_neon.s: src/wbaes_se_ms_neon.c.s
-
-.PHONY : src/wbaes_se_ms_neon.s
-
-# target to generate assembly for a file
-src/wbaes_se_ms_neon.c.s:
-	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.s
-.PHONY : src/wbaes_se_ms_neon.c.s
-
 src/wbmatrix/random.o: src/wbmatrix/random.c.o
 
 .PHONY : src/wbmatrix/random.o
@@ -526,6 +445,33 @@ test/aes_test.c.s:
 	$(MAKE) -f CMakeFiles/AES_TEST.dir/build.make CMakeFiles/AES_TEST.dir/test/aes_test.c.s
 .PHONY : test/aes_test.c.s
 
+test/wbaes_se_lt_avx2_test.o: test/wbaes_se_lt_avx2_test.c.o
+
+.PHONY : test/wbaes_se_lt_avx2_test.o
+
+# target to build an object file
+test/wbaes_se_lt_avx2_test.c.o:
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/test/wbaes_se_lt_avx2_test.c.o
+.PHONY : test/wbaes_se_lt_avx2_test.c.o
+
+test/wbaes_se_lt_avx2_test.i: test/wbaes_se_lt_avx2_test.c.i
+
+.PHONY : test/wbaes_se_lt_avx2_test.i
+
+# target to preprocess a source file
+test/wbaes_se_lt_avx2_test.c.i:
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/test/wbaes_se_lt_avx2_test.c.i
+.PHONY : test/wbaes_se_lt_avx2_test.c.i
+
+test/wbaes_se_lt_avx2_test.s: test/wbaes_se_lt_avx2_test.c.s
+
+.PHONY : test/wbaes_se_lt_avx2_test.s
+
+# target to generate assembly for a file
+test/wbaes_se_lt_avx2_test.c.s:
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/test/wbaes_se_lt_avx2_test.c.s
+.PHONY : test/wbaes_se_lt_avx2_test.c.s
+
 test/wbaes_se_lt_test.o: test/wbaes_se_lt_test.c.o
 
 .PHONY : test/wbaes_se_lt_test.o
@@ -553,44 +499,17 @@ test/wbaes_se_lt_test.c.s:
 	$(MAKE) -f CMakeFiles/WBAES_SE_LT.dir/build.make CMakeFiles/WBAES_SE_LT.dir/test/wbaes_se_lt_test.c.s
 .PHONY : test/wbaes_se_lt_test.c.s
 
-test/wbaes_se_ms_test.o: test/wbaes_se_ms_test.c.o
-
-.PHONY : test/wbaes_se_ms_test.o
-
-# target to build an object file
-test/wbaes_se_ms_test.c.o:
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/test/wbaes_se_ms_test.c.o
-.PHONY : test/wbaes_se_ms_test.c.o
-
-test/wbaes_se_ms_test.i: test/wbaes_se_ms_test.c.i
-
-.PHONY : test/wbaes_se_ms_test.i
-
-# target to preprocess a source file
-test/wbaes_se_ms_test.c.i:
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/test/wbaes_se_ms_test.c.i
-.PHONY : test/wbaes_se_ms_test.c.i
-
-test/wbaes_se_ms_test.s: test/wbaes_se_ms_test.c.s
-
-.PHONY : test/wbaes_se_ms_test.s
-
-# target to generate assembly for a file
-test/wbaes_se_ms_test.c.s:
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/test/wbaes_se_ms_test.c.s
-.PHONY : test/wbaes_se_ms_test.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... AES_TEST"
+	@echo "... rebuild_cache"
+	@echo "... WBAES_SE_LT_AVX2"
 	@echo "... WBAES_SE_LT"
-	@echo "... WBAES_SE_MS"
 	@echo "... LL_TEST"
 	@echo "... WBAES_SE_LIB"
 	@echo "... src/aes.o"
@@ -611,15 +530,6 @@ help:
 	@echo "... src/wbaes_se_lt_neon.o"
 	@echo "... src/wbaes_se_lt_neon.i"
 	@echo "... src/wbaes_se_lt_neon.s"
-	@echo "... src/wbaes_se_ms.o"
-	@echo "... src/wbaes_se_ms.i"
-	@echo "... src/wbaes_se_ms.s"
-	@echo "... src/wbaes_se_ms_avx2.o"
-	@echo "... src/wbaes_se_ms_avx2.i"
-	@echo "... src/wbaes_se_ms_avx2.s"
-	@echo "... src/wbaes_se_ms_neon.o"
-	@echo "... src/wbaes_se_ms_neon.i"
-	@echo "... src/wbaes_se_ms_neon.s"
 	@echo "... src/wbmatrix/random.o"
 	@echo "... src/wbmatrix/random.i"
 	@echo "... src/wbmatrix/random.s"
@@ -632,12 +542,12 @@ help:
 	@echo "... test/aes_test.o"
 	@echo "... test/aes_test.i"
 	@echo "... test/aes_test.s"
+	@echo "... test/wbaes_se_lt_avx2_test.o"
+	@echo "... test/wbaes_se_lt_avx2_test.i"
+	@echo "... test/wbaes_se_lt_avx2_test.s"
 	@echo "... test/wbaes_se_lt_test.o"
 	@echo "... test/wbaes_se_lt_test.i"
 	@echo "... test/wbaes_se_lt_test.s"
-	@echo "... test/wbaes_se_ms_test.o"
-	@echo "... test/wbaes_se_ms_test.i"
-	@echo "... test/wbaes_se_ms_test.s"
 .PHONY : help
 
 

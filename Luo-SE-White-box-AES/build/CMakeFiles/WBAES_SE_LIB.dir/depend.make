@@ -32,25 +32,6 @@ CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o: ../src/wbaes_se_lt_avx2.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o: ../src/wbaes_se_lt_neon.c
 
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../include/aes.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../include/wbaes_se_local.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../include/wbaes_se_ms.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../include/wbmatrix/WBMatrix.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../include/wbmatrix/random.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../include/wbmatrix/structure.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../src/wbaes_se_ms.c
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/aes.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/wbaes_se_local.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/wbaes_se_ms.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/wbaes_se_ms_avx2.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/wbmatrix/WBMatrix.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/wbmatrix/random.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../include/wbmatrix/structure.h
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../src/wbaes_se_ms_avx2.c
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o: ../src/wbaes_se_ms_neon.c
-
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o: ../include/wbmatrix/random.h
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o: ../src/wbmatrix/random.c
 

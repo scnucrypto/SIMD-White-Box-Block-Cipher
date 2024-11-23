@@ -6,4 +6,4 @@ CMakeFiles/LL_TEST.dir/test/LL_test.c.o
  ../include/wbmatrix/WBMatrix.h
  ../include/wbmatrix/random.h
  ../include/wbmatrix/structure.h
- /home/ryanclq/code/self-equivalence/White-box-AES-SE/test/LL_test.c
+ /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/LL_test.c

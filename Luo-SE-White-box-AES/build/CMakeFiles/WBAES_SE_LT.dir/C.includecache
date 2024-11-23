@@ -42,18 +42,6 @@ aes.h
 wbaes_se_local.h
 -
 
-../include/wbaes_se_lt_avx2.h
-assert.h
--
-immintrin.h
--
-wbaes_se_lt.h
-../include/wbaes_se_lt.h
-wbmatrix/WBMatrix.h
-../include/wbmatrix/WBMatrix.h
-string.h
--
-
 ../include/wbmatrix/WBMatrix.h
 wbmatrix/structure.h
 ../include/wbmatrix/wbmatrix/structure.h
@@ -74,13 +62,11 @@ stdint.h
 stdint.h
 -
 
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/wbaes_se_lt_test.c
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/wbaes_se_lt_test.c
 stdint.h
 -
 wbaes_se_lt.h
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/wbaes_se_lt.h
-wbaes_se_lt_avx2.h
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/wbaes_se_lt_avx2.h
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/wbaes_se_lt.h
 speed.h
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/speed.h
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/speed.h
 

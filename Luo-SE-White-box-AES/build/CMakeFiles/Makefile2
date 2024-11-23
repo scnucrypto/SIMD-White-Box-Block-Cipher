@@ -44,18 +44,18 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ryanclq/code/self-equivalence/White-box-AES-SE
+CMAKE_SOURCE_DIR = /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ryanclq/code/self-equivalence/White-box-AES-SE/build
+CMAKE_BINARY_DIR = /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/AES_TEST.dir/all
+all: CMakeFiles/WBAES_SE_LT_AVX2.dir/all
 all: CMakeFiles/WBAES_SE_LT.dir/all
-all: CMakeFiles/WBAES_SE_MS.dir/all
 all: CMakeFiles/LL_TEST.dir/all
 all: CMakeFiles/WBAES_SE_LIB.dir/all
 
@@ -68,8 +68,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/AES_TEST.dir/clean
+clean: CMakeFiles/WBAES_SE_LT_AVX2.dir/clean
 clean: CMakeFiles/WBAES_SE_LT.dir/clean
-clean: CMakeFiles/WBAES_SE_MS.dir/clean
 clean: CMakeFiles/LL_TEST.dir/clean
 clean: CMakeFiles/WBAES_SE_LIB.dir/clean
 
@@ -82,14 +82,14 @@ clean: CMakeFiles/WBAES_SE_LIB.dir/clean
 CMakeFiles/AES_TEST.dir/all: CMakeFiles/WBAES_SE_LIB.dir/all
 	$(MAKE) -f CMakeFiles/AES_TEST.dir/build.make CMakeFiles/AES_TEST.dir/depend
 	$(MAKE) -f CMakeFiles/AES_TEST.dir/build.make CMakeFiles/AES_TEST.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=1,2 "Built target AES_TEST"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=1,2 "Built target AES_TEST"
 .PHONY : CMakeFiles/AES_TEST.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AES_TEST.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/AES_TEST.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 0
 .PHONY : CMakeFiles/AES_TEST.dir/rule
 
 # Convenience name for target.
@@ -103,20 +103,47 @@ CMakeFiles/AES_TEST.dir/clean:
 .PHONY : CMakeFiles/AES_TEST.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/WBAES_SE_LT_AVX2.dir
+
+# All Build rule for target.
+CMakeFiles/WBAES_SE_LT_AVX2.dir/all: CMakeFiles/WBAES_SE_LIB.dir/all
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/depend
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=16,17 "Built target WBAES_SE_LT_AVX2"
+.PHONY : CMakeFiles/WBAES_SE_LT_AVX2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/WBAES_SE_LT_AVX2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WBAES_SE_LT_AVX2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 0
+.PHONY : CMakeFiles/WBAES_SE_LT_AVX2.dir/rule
+
+# Convenience name for target.
+WBAES_SE_LT_AVX2: CMakeFiles/WBAES_SE_LT_AVX2.dir/rule
+
+.PHONY : WBAES_SE_LT_AVX2
+
+# clean rule for target.
+CMakeFiles/WBAES_SE_LT_AVX2.dir/clean:
+	$(MAKE) -f CMakeFiles/WBAES_SE_LT_AVX2.dir/build.make CMakeFiles/WBAES_SE_LT_AVX2.dir/clean
+.PHONY : CMakeFiles/WBAES_SE_LT_AVX2.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/WBAES_SE_LT.dir
 
 # All Build rule for target.
 CMakeFiles/WBAES_SE_LT.dir/all: CMakeFiles/WBAES_SE_LIB.dir/all
 	$(MAKE) -f CMakeFiles/WBAES_SE_LT.dir/build.make CMakeFiles/WBAES_SE_LT.dir/depend
 	$(MAKE) -f CMakeFiles/WBAES_SE_LT.dir/build.make CMakeFiles/WBAES_SE_LT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=17,18 "Built target WBAES_SE_LT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=14,15 "Built target WBAES_SE_LT"
 .PHONY : CMakeFiles/WBAES_SE_LT.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/WBAES_SE_LT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WBAES_SE_LT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 0
 .PHONY : CMakeFiles/WBAES_SE_LT.dir/rule
 
 # Convenience name for target.
@@ -130,47 +157,20 @@ CMakeFiles/WBAES_SE_LT.dir/clean:
 .PHONY : CMakeFiles/WBAES_SE_LT.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/WBAES_SE_MS.dir
-
-# All Build rule for target.
-CMakeFiles/WBAES_SE_MS.dir/all: CMakeFiles/WBAES_SE_LIB.dir/all
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/depend
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=19,20 "Built target WBAES_SE_MS"
-.PHONY : CMakeFiles/WBAES_SE_MS.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/WBAES_SE_MS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 14
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WBAES_SE_MS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 0
-.PHONY : CMakeFiles/WBAES_SE_MS.dir/rule
-
-# Convenience name for target.
-WBAES_SE_MS: CMakeFiles/WBAES_SE_MS.dir/rule
-
-.PHONY : WBAES_SE_MS
-
-# clean rule for target.
-CMakeFiles/WBAES_SE_MS.dir/clean:
-	$(MAKE) -f CMakeFiles/WBAES_SE_MS.dir/build.make CMakeFiles/WBAES_SE_MS.dir/clean
-.PHONY : CMakeFiles/WBAES_SE_MS.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/LL_TEST.dir
 
 # All Build rule for target.
 CMakeFiles/LL_TEST.dir/all: CMakeFiles/WBAES_SE_LIB.dir/all
 	$(MAKE) -f CMakeFiles/LL_TEST.dir/build.make CMakeFiles/LL_TEST.dir/depend
 	$(MAKE) -f CMakeFiles/LL_TEST.dir/build.make CMakeFiles/LL_TEST.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=3,4 "Built target LL_TEST"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=3,4 "Built target LL_TEST"
 .PHONY : CMakeFiles/LL_TEST.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LL_TEST.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LL_TEST.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 0
 .PHONY : CMakeFiles/LL_TEST.dir/rule
 
 # Convenience name for target.
@@ -190,14 +190,14 @@ CMakeFiles/LL_TEST.dir/clean:
 CMakeFiles/WBAES_SE_LIB.dir/all:
 	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/depend
 	$(MAKE) -f CMakeFiles/WBAES_SE_LIB.dir/build.make CMakeFiles/WBAES_SE_LIB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16 "Built target WBAES_SE_LIB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13 "Built target WBAES_SE_LIB"
 .PHONY : CMakeFiles/WBAES_SE_LIB.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/WBAES_SE_LIB.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WBAES_SE_LIB.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles 0
 .PHONY : CMakeFiles/WBAES_SE_LIB.dir/rule
 
 # Convenience name for target.

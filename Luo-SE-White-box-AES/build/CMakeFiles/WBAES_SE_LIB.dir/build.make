@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ryanclq/code/self-equivalence/White-box-AES-SE
+CMAKE_SOURCE_DIR = /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ryanclq/code/self-equivalence/White-box-AES-SE/build
+CMAKE_BINARY_DIR = /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/WBAES_SE_LIB.dir/depend.make
@@ -59,146 +59,107 @@ include CMakeFiles/WBAES_SE_LIB.dir/flags.make
 
 CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.o: ../src/aes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/aes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/aes.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/aes.c > CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/aes.c > CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/aes.c -o CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/aes.c -o CMakeFiles/WBAES_SE_LIB.dir/src/aes.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.o: ../src/speed.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/speed.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/speed.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/speed.c > CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/speed.c > CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/speed.c -o CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/speed.c -o CMakeFiles/WBAES_SE_LIB.dir/src/speed.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o: ../src/wbaes_se_local.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_local.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_local.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_local.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_local.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_local.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_local.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o: ../src/wbaes_se_lt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o: ../src/wbaes_se_lt_avx2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt_avx2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_avx2.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt_avx2.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_avx2.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt_avx2.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_avx2.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o: ../src/wbaes_se_lt_neon.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt_neon.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_neon.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt_neon.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_neon.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_lt_neon.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.s
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o: ../src/wbaes_se_ms.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms.c
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.i
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.s
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o: ../src/wbaes_se_ms_avx2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms_avx2.c
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms_avx2.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.i
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms_avx2.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.s
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o: ../src/wbaes_se_ms_neon.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms_neon.c
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms_neon.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.i
-
-CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbaes_se_ms_neon.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_neon.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o: ../src/wbmatrix/random.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbmatrix/random.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/random.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbmatrix/random.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/random.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbmatrix/random.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/random.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.s
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o: CMakeFiles/WBAES_SE_LIB.dir/flags.make
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o: ../src/wbmatrix/wbmatrix.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o   -c /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbmatrix/wbmatrix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o   -c /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/wbmatrix.c
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbmatrix/wbmatrix.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/wbmatrix.c > CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.i
 
 CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/self-equivalence/White-box-AES-SE/src/wbmatrix/wbmatrix.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/wbmatrix.c -o CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.s
 
 # Object files for target WBAES_SE_LIB
 WBAES_SE_LIB_OBJECTS = \
@@ -208,9 +169,6 @@ WBAES_SE_LIB_OBJECTS = \
 "CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o" \
 "CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o" \
 "CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o" \
-"CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o" \
-"CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o" \
-"CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o" \
 "CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o" \
 "CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o"
 
@@ -223,14 +181,11 @@ libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_local.c.o
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt.c.o
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_avx2.c.o
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_lt_neon.c.o
-libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms.c.o
-libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_avx2.c.o
-libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbaes_se_ms_neon.c.o
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/random.c.o
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/src/wbmatrix/wbmatrix.c.o
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/build.make
 libWBAES_SE_LIB.a: CMakeFiles/WBAES_SE_LIB.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libWBAES_SE_LIB.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C static library libWBAES_SE_LIB.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/WBAES_SE_LIB.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WBAES_SE_LIB.dir/link.txt --verbose=$(VERBOSE)
 
@@ -244,6 +199,6 @@ CMakeFiles/WBAES_SE_LIB.dir/clean:
 .PHONY : CMakeFiles/WBAES_SE_LIB.dir/clean
 
 CMakeFiles/WBAES_SE_LIB.dir/depend:
-	cd /home/ryanclq/code/self-equivalence/White-box-AES-SE/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryanclq/code/self-equivalence/White-box-AES-SE /home/ryanclq/code/self-equivalence/White-box-AES-SE /home/ryanclq/code/self-equivalence/White-box-AES-SE/build /home/ryanclq/code/self-equivalence/White-box-AES-SE/build /home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/WBAES_SE_LIB.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/WBAES_SE_LIB.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/WBAES_SE_LIB.dir/depend
 

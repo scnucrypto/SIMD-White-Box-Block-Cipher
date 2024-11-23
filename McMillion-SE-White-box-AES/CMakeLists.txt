@@ -11,11 +11,13 @@ add_library(WBAES_SE_LIB ${WBAES_SE_SRC})
 
 add_executable(LL_TEST test/LL_test.c)
 add_executable(WBAES_SE_MS test/wbaes_se_ms_test.c)
+add_executable(WBAES_SE_MS_AVX2 test/wbaes_se_ms_avx2_test.c)
 # add_executable(WBAES_SE_MS_NEON test/wbaes_se_ms_neon_test.c)
 add_executable(AES_TEST test/aes_test.c)
 
 target_link_libraries(LL_TEST WBAES_SE_LIB)
 target_link_libraries(WBAES_SE_MS WBAES_SE_LIB)
+target_link_libraries(WBAES_SE_MS_AVX2 WBAES_SE_LIB)
 # target_link_libraries(WBAES_SE_MS_NEON WBAES_SE_LIB)
 target_link_libraries(AES_TEST WBAES_SE_LIB)
 

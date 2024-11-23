@@ -547,13 +547,14 @@ int main() {
     gcm_ctx = gcm_init();
     wbsm4_se_avx2_gcm_init(gcm_ctx,iv_enc,aad,23,tag,16,ctx);
     
-    // performance_test_enc(test_wbsm4_se_avx2_ecb_crypt_loop, size, 7, 3);
+    printf("\nwbsm4_se_avx2_ecb:\n");
+    wbsm4_se_avx2_ecb_encrypt(input,output,16,ctx);
+    dump_hex(output,16);
+    performance_test_enc(test_wbsm4_se_avx2_ecb_crypt_loop, size, 7, 3);
     // performance_test_enc(test_wbsm4_se_avx2_ctr_crypt_loop, size, 7, 3);
     // performance_test_enc(test_wbsm4_se_avx2_gcm_crypt_loop, size, 7, 3);
     
-    
 
-    wbsm4_se_avx2_ecb_encrypt(input,output,16,ctx);
     // for (size_t i = 0; i < 32; i++)
     // {
     //     printf("%02x,%02x,%02x,%02x  ",ctx->M0_V[i][0],ctx->M0_V[i][1],ctx->M0_V[i][2],ctx->M0_V[i][3]);
@@ -566,15 +567,15 @@ int main() {
     // }
     // printf("\n");
 
-    printf("\nwbsm4_se_avx2_ecb:\n");
-    for (size_t i = 0; i < 1024; i++)
-    {
-        printf("%02x ",output[i]);
-        if ((i+1) % 16 == 0)
-        {
-            printf("\n");
-        }
-    }
+   
+    // for (size_t i = 0; i < 1024; i++)
+    // {
+    //     printf("%02x ",output[i]);
+    //     if ((i+1) % 16 == 0)
+    //     {
+    //         printf("\n");
+    //     }
+    // }
     #if 1
         // test[0] = _mm256_set1_epi32(0x3c3c3c3c);
         // test[1] = _mm256_set1_epi32(0x12345678);

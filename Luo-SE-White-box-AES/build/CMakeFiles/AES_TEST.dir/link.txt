@@ -1,1 +1,1 @@
-/usr/bin/cc  -std=c99  -O2 -m64 -mavx2 -g  -rdynamic CMakeFiles/AES_TEST.dir/test/aes_test.c.o  -o AES_TEST  libWBAES_SE_LIB.a 
+/usr/bin/cc  -std=c99  -O2 -m64 -mavx2  -rdynamic CMakeFiles/AES_TEST.dir/test/aes_test.c.o  -o AES_TEST  libWBAES_SE_LIB.a 

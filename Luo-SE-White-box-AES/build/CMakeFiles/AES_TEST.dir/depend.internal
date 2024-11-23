@@ -4,4 +4,4 @@
 CMakeFiles/AES_TEST.dir/test/aes_test.c.o
  ../include/aes.h
  ../include/speed.h
- /home/ryanclq/code/self-equivalence/White-box-AES-SE/test/aes_test.c
+ /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/aes_test.c

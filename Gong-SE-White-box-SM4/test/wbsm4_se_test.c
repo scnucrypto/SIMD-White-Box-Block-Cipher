@@ -19,28 +19,6 @@ unsigned char output[16384] = {0};
 wbsm4_se_context *ctx;
 uint32_t x4 = 0x01234567;
 
-// size_t test_wbsm4se_ctr_crypt_loop(size_t size){
-//     size_t count = 0;
-
-//     for (count = 0; run && count < 0xffffffffffffffff; count++)
-//     {
-//         wbcrypto_wbsm4_se_ctr_encrypt(&ctx, iv_enc, ecount_buf, &num, input, size, output);
-//     }
-    
-//     return count;
-// }
-
-// size_t test_wbsm4se_cbc_crypt_loop(size_t size){
-//     size_t count = 0;
-
-//     for (count = 0; run && count < 0xffffffffffffffff; count++)
-//     {
-//         wbcrypto_wbsm4_se_cbc_encrypt(&ctx, iv_enc, input, size, output);
-//     }
-    
-//     return count;
-// }
-
 size_t test_wbsm4_se_ecb_crypt_loop(size_t size){
     size_t count = 0;
 
@@ -86,6 +64,16 @@ size_t test_sbox_loop(){
     return count;
 }
 
+static void dump_hex(uint8_t * h, int len)
+{
+    while(len--)
+    {   
+        printf("%02hhx ",*h++);
+        if(len%16==0) printf("\n");
+    }
+    printf("\n");
+}
+
 int main() {
     size_t size[7] = {16, 64, 256, 512, 1024, 8192, 16384};
     
@@ -110,13 +98,10 @@ int main() {
         input[i+14] = 0x32;
         input[i+15] = 0x10;
     }
-    wbsm4_se_encrypt_func_opt(input,output,ctx);
-    printf("\n");
-    for (size_t i = 0; i < 16; i++)
-    {
-        printf("%02x ",output[i]);
-    }
     printf("\nwbsm4_se_ecb:\n");
+    wbsm4_se_ecb_encrypt(input,output,16,ctx);
+    dump_hex(output,16);
+    
     performance_test_enc(test_wbsm4_se_ecb_crypt_loop, size, 7, 3);
     #if 0
         while(1) {

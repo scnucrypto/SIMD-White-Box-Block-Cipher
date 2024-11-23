@@ -1,5 +1,5 @@
-// #include "simd_white_box_speck128_256.h"
-#include "simd_white_box_speck128_256_neon.h"
+#include "simd_white_box_speck128_256.h"
+// #include "simd_white_box_speck128_256_neon.h"
 void simd_matrix_vector_product(simd_union matrix[BLOCK_SIZE / SIMD_PACKED_COUNT][2], WORD_TYPE xy[2], WORD_TYPE res[2]) {
     SIMD_TYPE xy0 = SIMD_SET1(xy[0]);
     SIMD_TYPE xy1 = SIMD_SET1(xy[1]);

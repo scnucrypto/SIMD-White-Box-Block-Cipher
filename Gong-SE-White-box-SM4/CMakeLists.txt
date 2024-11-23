@@ -14,17 +14,15 @@ add_library(WBMatrix_LIB ${wbmatrix_src})
 
 add_executable(WBSM4SE test/wbsm4_se_test.c)
 add_executable(WBSM4SELA test/wbsm4_se_la_test.c)
-# add_executable(WBSM4SEAVX2 test/wbsm4_se_avx2_test.c)
+add_executable(WBSM4SEAVX2 test/wbsm4_se_avx2_test.c)
 # add_executable(WBSM4SENEON test/wbsm4_se_neon_test.c)
-add_executable(WBSM4XL test/wbsm4_xl_test.c)
-add_executable(WBSM4BW test/wbsm4_bw_test.c)
+
 
 target_link_libraries(WBSM4SE WBMatrix_LIB)
 target_link_libraries(WBSM4SELA WBMatrix_LIB)
-# target_link_libraries(WBSM4SEAVX2 WBMatrix_LIB)
+target_link_libraries(WBSM4SEAVX2 WBMatrix_LIB)
 # target_link_libraries(WBSM4SENEON WBMatrix_LIB)
-target_link_libraries(WBSM4XL WBMatrix_LIB)
-target_link_libraries(WBSM4BW WBMatrix_LIB)
+
 
 add_executable(SM4 test/sm4_test.c)
 add_executable(SM4LUT test/sm4_lut_test.c)

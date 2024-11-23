@@ -1,7 +1,7 @@
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/rebuild_cache.dir
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/edit_cache.dir
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/AES_TEST.dir
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/WBAES_SE_LT.dir
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/WBAES_SE_MS.dir
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/LL_TEST.dir
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/build/CMakeFiles/WBAES_SE_LIB.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/edit_cache.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/AES_TEST.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/rebuild_cache.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/WBAES_SE_LT_AVX2.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/WBAES_SE_LT.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/LL_TEST.dir
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/build/CMakeFiles/WBAES_SE_LIB.dir

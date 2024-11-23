@@ -28,11 +28,11 @@ signal.h
 stdio.h
 -
 
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/aes_test.c
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/aes_test.c
 stdint.h
 -
 aes.h
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/aes.h
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/aes.h
 speed.h
-/home/ryanclq/code/self-equivalence/White-box-AES-SE/test/speed.h
+/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/test/speed.h
 
