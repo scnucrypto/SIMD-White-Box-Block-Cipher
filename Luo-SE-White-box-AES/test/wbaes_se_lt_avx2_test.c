@@ -40,7 +40,8 @@ int main()
     
     wbaes_se_lt_avx2_gen_table(avx2_ctx, key_vector);
 
-    // wbaes_se_lt_avx2_ecb_encrypt(IN, OUT, 16, lt_ctx);
+    wbaes_se_lt_avx2_ecb_encrypt(IN, OUT, 16, avx2_ctx);
+    dump_hex(OUT,16);
     printf("\nWBAES_SE_LT_AVX2:\n");
     performance_test_enc(test_wbaes_se_lt_avx2_ecb_crypt_loop, size, 7, 3);
 

@@ -42,7 +42,7 @@ int main()
     wbaes_se_ms_avx2_ecb_encrypt(IN, OUT, 16, avx2_ctx);
     printf("\nWBAES_SE_MS_AVX2:\n");
     dump_hex(OUT,16);
-    performance_test_enc(test_wbaes_se_ms_avx2_ecb_crypt_loop, size, 7, 3);
+    // performance_test_enc(test_wbaes_se_ms_avx2_ecb_crypt_loop, size, 7, 3);
   
    
     wbaes_se_ms_avx2_context_free(avx2_ctx);

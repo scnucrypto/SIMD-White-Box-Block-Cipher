@@ -38,9 +38,8 @@ int wbaes_se_ms_gen_table(wbaes_se_ms_context *ctx, const uint8_t *key) {
 
     wbcrypto_aes_context aes_key;
     wbcrypto_aes_setkey_enc(&aes_key,key);
-    //! test
-    InitRandom(1);
-    // InitRandom(((unsigned int) time(NULL)));
+    
+    InitRandom(((unsigned int) time(NULL)));
 
     SE_initial(A,B);
 
@@ -56,7 +55,7 @@ int wbaes_se_ms_gen_table(wbaes_se_ms_context *ctx, const uint8_t *key) {
     for (i = 0; i < 2; i++) {
         //affine P
         genaffinepairM128(&ctx->P[i], &ctx->P_inv[i]);
-      
+
     }
     for (size_t i = 0; i < 10; i++)
     {
@@ -88,6 +87,29 @@ int wbaes_se_ms_gen_table(wbaes_se_ms_context *ctx, const uint8_t *key) {
         affinemixM128(L, BB[i-1], &ctx->AL[i]);
         affinemixM128(K[i], ctx->AL[i], &ctx->AL[i]);
         affinemixM128(AA[i], ctx->AL[i], &ctx->AL[i]);
+        // todo 11.23
+        // !test
+        // if(i==1){
+        //     affinemixM128(K[i], L, &ctx->AL[i]);
+        //     uint8_t testal8[16] = {0x63,0xca,0xb7,0x04,0x09,0x53,0xd0,0x51,0xcd,0x60,0xe0,0xe7,0xba,0x70,0xe1,0x8c};
+        //     uint64_t test64[2] = {0};
+        //     test64[0] = GET64(testal8);
+        //     test64[1] = GET64(testal8+8);
+        //     // affineU128(ctx->AL[i],test64,test64);
+        //     V128 test11 = {
+        //         .V[0] = test64[0],
+        //         .V[1] = test64[1],
+        //                     }; 
+        //     MatMulVecM128(ctx->AL[i].Mat,test11,&test11);
+        //     // test11.V[0] ^= ctx->AL[i].Vec.V[0];
+        //     // test11.V[1] ^= ctx->AL[i].Vec.V[1];
+        //     PUT64(test11.V[0],testal8);
+        //     PUT64(test11.V[1],testal8+8);
+        //     // PUT64(test64[0],testal8);
+        //     // PUT64(test64[1],testal8+8);
+        //     dump_hex(testal8,16);
+        // }
+        
     }
 
     identityM128(&K[10].Mat);
@@ -96,7 +118,9 @@ int wbaes_se_ms_gen_table(wbaes_se_ms_context *ctx, const uint8_t *key) {
     affinemixM128(shiftrow, BB[9], &ctx->AL[10]);
     affinemixM128(K[10], ctx->AL[10], &ctx->AL[10]);
     affinemixM128(ctx->P[1], ctx->AL[10], &ctx->AL[10]);
-    
+
+    //! test
+    // affinemixM128(K[10], shiftrow, &ctx->AL[10]);
     return 1;
 }
 

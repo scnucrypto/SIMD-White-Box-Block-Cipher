@@ -18,16 +18,6 @@ stdlib.h
 stdio.h
 -
 
-../include/speed.h
-sys/times.h
--
-unistd.h
--
-signal.h
--
-stdio.h
--
-
 ../include/wbaes_se_local.h
 wbmatrix/WBMatrix.h
 ../include/wbmatrix/WBMatrix.h
@@ -40,18 +30,6 @@ assert.h
 aes.h
 -
 wbaes_se_local.h
--
-
-../include/wbaes_se_lt_avx2.h
-assert.h
--
-immintrin.h
--
-wbaes_se_lt.h
-../include/wbaes_se_lt.h
-wbmatrix/WBMatrix.h
-../include/wbmatrix/WBMatrix.h
-string.h
 -
 
 ../include/wbmatrix/WBMatrix.h
@@ -74,33 +52,7 @@ stdint.h
 stdint.h
 -
 
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/aes.c
-aes.h
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/aes.h
-
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/speed.c
-speed.h
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/speed.h
-
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_local.c
-wbaes_se_local.h
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_local.h
-
 /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt.c
 wbaes_se_lt.h
 /home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt.h
-
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_avx2.c
-wbaes_se_lt_avx2.h
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_avx2.h
-
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbaes_se_lt_neon.c
-
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/random.c
-wbmatrix/random.h
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/wbmatrix/random.h
-
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/wbmatrix.c
-wbmatrix/WBMatrix.h
-/home/ryanclq/code/SIMD-White-Box-Block-Cipher/Luo-SE-White-box-AES/src/wbmatrix/wbmatrix/WBMatrix.h
 

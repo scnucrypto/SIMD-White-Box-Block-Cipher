@@ -16,7 +16,6 @@ static void dump_hex(uint8_t * h, int len)
 
 static Aff8 A[2039], B[2039];
 
-//todo 需要添加判断，以防没有avx2指令集
 void MatrixdivM32to4(M32 mat32, M4 m4[8][8])
 {
     uint64_t m[2][4] = {

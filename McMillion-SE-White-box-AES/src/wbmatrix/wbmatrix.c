@@ -327,8 +327,8 @@ void printM128(M128 Mat)//printf Matrix 128*128
     int i;
     for(i = 0; i < 128; i++)
     {
-        printf(".M[%d][0] = 0x%llx, ", i,Mat.M[i][0]);
-        printf(".M[%d][1] = 0x%llx,\n", i,Mat.M[i][1]);
+        printf(".M[%d][0] = 0x%016llx, ", i,Mat.M[i][0]);
+        printf(".M[%d][1] = 0x%016llx,\n", i,Mat.M[i][1]);
     }
 }
 void printV4(V4 Vec)//printf Vector 4*1

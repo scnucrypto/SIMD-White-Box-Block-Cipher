@@ -5,9 +5,9 @@ static void dump_hex(uint8_t * h, int len)
     while(len--)
     {   
         printf("%02hhx ",*h++);
-        if(len%16==0) printf("\n");
+        if(len%32==0) printf("\n");
     }
-    printf("\n");
+    // printf("\n");
 }
 
 wbaes_se_ms_avx2_context * wbaes_se_ms_avx2_context_init(){
@@ -24,7 +24,7 @@ cleanup:
 void wbaes_se_ms_avx2_context_free(wbaes_se_ms_avx2_context *ctx) {
     memset(ctx, 0, sizeof(wbaes_se_ms_avx2_context));
 }
-
+// todo 11.23有问题
 void MatrixdivM128to4(M128 mat128, M4 m4[32][32])
 {
     uint64_t m[2][4] = {
@@ -107,7 +107,6 @@ void GEN_TABLE_DATA_E4(M4 TMP[32][32], uint8_t index, uint8_t data[16][16][16]) 
 
 void AFFINE_ENCODING(__m256i IN[16], __m256i OUT[16], uint8_t table_f4[16][16][16], uint8_t table_e4[16][16][16], uint8_t table_vec[16]) {
         __m256i input_f4[16], input_e4[16];
-		// ! 先用个test_out，后面再检查具体是哪里不行
 		// __m256i test_out[16];
         __m256i tmp_f4,tmp_e4;
         __m128i tmp_128_mat;// 表的大小只有128
@@ -127,33 +126,45 @@ void AFFINE_ENCODING(__m256i IN[16], __m256i OUT[16], uint8_t table_f4[16][16][1
             input_f4[i] = _mm256_srli_epi32(input_f4[i],4);
             input_e4[i] = _mm256_and_si256(mask[1],IN[i]);
         }
-        
+        // printf("input:\n");
+        // dump_hex(IN,512);
+        // printf("input f4:\n");
+        // dump_hex(input_f4,512);
+        // printf("input e4:\n");
+        // dump_hex(input_e4,512);
+       
 		// 16个字节明文循环
         for (size_t i = 0; i < 16; i++)
         {
 			OUT[i] = _mm256_setzero_si256(); 
+            // printf("out:%d\n",i);
+            // dump_hex(&OUT[i],32);
             for (size_t j = 0; j < 16; j++)
 			{
-				tmp_128_mat = _mm_loadu_si128(table_f4[i][j]);
+			
+                tmp_128_mat = _mm_loadu_si128(table_f4[j][i]);
 				tmp_mat = _mm256_setr_m128i(tmp_128_mat, tmp_128_mat);
 				tmp_f4 = _mm256_shuffle_epi8(tmp_mat, input_f4[j]);// 4-8查表
-
-				tmp_128_mat = _mm_loadu_si128(table_e4[i][j]);
+                
+             
+				tmp_128_mat = _mm_loadu_si128(table_e4[j][i]);
 				tmp_mat = _mm256_setr_m128i(tmp_128_mat, tmp_128_mat);
 				tmp_e4 = _mm256_shuffle_epi8(tmp_mat, input_e4[j]);// 4-8查表
-
+        
 				OUT[i] = OUT[i] ^ tmp_e4 ^ tmp_f4;
+           
 			}
 			
         }
-     
+        // printf("before vec\n");
+        // dump_hex(OUT,512);
         for (size_t i = 0; i < 16; i++)
         {
 			tmp_vec = _mm256_set1_epi8(table_vec[i]);
            	OUT[i] = OUT[i] ^ tmp_vec;
 			
         }
-        // dump_hex(OUT,16);
+        // dump_hex(OUT,512);
 	
 }
 
@@ -252,7 +263,21 @@ int wbaes_se_ms_avx2_gen_table(wbaes_se_ms_avx2_context *ctx, const uint8_t *key
 
 	for (size_t i = 0; i < 11; i++)
 	{
+        // 测试
 		MatrixdivM128to4(aes_key.AL[i].Mat,TMP);
+        // if(i == 1){
+        //     printf("before div:");
+        //     printM128(aes_key.P[i].Mat);
+        //     printf("after div:");
+        //     for (size_t i = 0; i < 16; i++)
+        //     {
+        //         for (size_t j = 0; j < 32; j++)
+        //         {
+        //             printf("row:%d, col:%d :",i,j);
+        //             printM4(TMP[i][j]);
+        //         } 
+        //     }
+        // }
         for (size_t j = 0; j < 16; j++)
         {
             GEN_TABLE_DATA_F4(TMP,j,ctx->AL_M_F4[i]);
@@ -262,9 +287,11 @@ int wbaes_se_ms_avx2_gen_table(wbaes_se_ms_avx2_context *ctx, const uint8_t *key
         PUT64(aes_key.AL[i].Vec.V[1],ctx->AL_V[i]+8);
 
 	}
+    // todo test
     for (size_t i = 0; i < 2; i++)
 	{
 		MatrixdivM128to4(aes_key.P[i].Mat,TMP);
+        
         for (size_t j = 0; j < 16; j++)
         {
             GEN_TABLE_DATA_F4(TMP,j,ctx->P_M_F4[i]);
@@ -293,16 +320,19 @@ int wbaes_se_ms_avx2_encrypt(const uint8_t IN[512], uint8_t OUT[512], wbaes_se_m
 	__m256i state1[16];
 	// __m256i state2[16];
 	__m256i mask;
-
 	mask = _mm256_set1_epi32(0xFF);
 	memcpy(state1, IN, 512);
 	DATA_PACK(state1);
-	
+	// dump_hex(state1,512);
     AFFINE_ENCODING(state1, state1, ctx->P_M_F4[0], ctx->P_M_E4[0], ctx->P_V[0]);
-
+    // printf("after external encoding:\n");
+    // dump_hex(state1,512);
+ 
 	for (size_t i = 0; i < 10; i++)
 	{
         AFFINE_ENCODING(state1, state1, ctx->AL_M_F4[i], ctx->AL_M_E4[i], ctx->AL_V[i]);
+        printf("after AL:\n");
+        dump_hex(state1,512);
         for (size_t j = 0; j < 16; j++)
         {
             state1[j] = _mm256_i32gather_epi32((const int*)T0, _mm256_and_si256(mask, state1[j]), 4)
@@ -310,10 +340,11 @@ int wbaes_se_ms_avx2_encrypt(const uint8_t IN[512], uint8_t OUT[512], wbaes_se_m
                     ^ _mm256_i32gather_epi32((const int*)T2, _mm256_and_si256(mask, _mm256_srli_epi32(state1[j], 16)), 4) 
                     ^ _mm256_i32gather_epi32((const int*)T3, _mm256_and_si256(mask, _mm256_srli_epi32(state1[j], 24)), 4);
         }
-        
+        printf("after SBOX:\n");
+        dump_hex(state1,512);
         
 	}
-   
+ 
     AFFINE_ENCODING(state1, state1, ctx->AL_M_F4[10], ctx->AL_M_E4[10], ctx->AL_V[10]);
 
     AFFINE_ENCODING(state1, state1, ctx->P_inv_M_F4[1], ctx->P_inv_M_E4[1], ctx->P_inv_V[1]);

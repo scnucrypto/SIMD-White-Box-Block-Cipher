@@ -169,10 +169,10 @@
 // 			OUT[i].vect_u32 = vdupq_n_u32(0); 
 //             for (size_t j = 0; j < 16; j++)
 // 			{
-// 				tmp_128_mat.vect_u8 = vld1q_u8(table_f4[i][j]);
+// 				tmp_128_mat.vect_u8 = vld1q_u8(table_f4[j][i]);
 // 				tmp_f4.vect_u8 = vqtbl1q_u8(tmp_128_mat.vect_u8, input_f4[j].vect_u8);// 4-8查表
 
-// 				tmp_128_mat.vect_u8 = vld1q_u8(table_e4[i][j]);
+// 				tmp_128_mat.vect_u8 = vld1q_u8(table_e4[j][i]);
 // 				tmp_e4.vect_u8 = vqtbl1q_u8(tmp_128_mat.vect_u8, input_e4[j].vect_u8);// 4-8查表
 
 // 				OUT[i].vect_u8 = OUT[i].vect_u8 ^ tmp_e4.vect_u8 ^ tmp_f4.vect_u8;

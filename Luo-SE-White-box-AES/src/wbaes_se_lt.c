@@ -42,9 +42,8 @@ int wbaes_se_lt_gen_table(wbaes_se_lt_context *ctx, const uint8_t *key) {
 
     wbcrypto_aes_context aes_key;
     wbcrypto_aes_setkey_enc(&aes_key,key);
-    //! test
-    InitRandom(1);
-    // InitRandom(((unsigned int) time(NULL)));
+   
+    InitRandom(((unsigned int) time(NULL)));
 
     SE_initial(A,B);
 
@@ -56,7 +55,6 @@ int wbaes_se_lt_gen_table(wbaes_se_lt_context *ctx, const uint8_t *key) {
     shiftrow.Mat = shiftrows;
     shiftrow.Vec.V[0] = 0;
     shiftrow.Vec.V[1] = 0;
-    // !test
     for (i = 0; i < 2; i++) {
         //affine P
         genaffinepairM128(&ctx->P[i], &ctx->P_inv[i]);
